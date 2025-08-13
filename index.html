@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="2;url=https://wristfellow1.cartpe.in/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wrist Fellow</title>
   <style>
@@ -79,6 +78,21 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
+    /* Retry button */
+    .retry-btn {
+      margin-top: 10px;
+      padding: 6px 12px;
+      background: #facc15;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .retry-btn:hover {
+      background: #eab308;
+    }
   </style>
 </head>
 <body>
@@ -109,6 +123,27 @@
     <span>Loading...</span>
     <div class="spinner"></div>
   </div>
+
+  <script>
+    let redirected = false;
+
+    function redirectNow() {
+      redirected = true;
+      window.location.href = "https://wristfellow1.cartpe.in/";
+    }
+
+    // Redirect after 1 second
+    setTimeout(redirectNow, 500);
+
+    // If still not redirected after 8 seconds, show retry option
+    setTimeout(function() {
+      if (!redirected) {
+        document.querySelector(".loading").innerHTML = `
+          <span>Connection seems slow.</span>
+          <button class="retry-btn" onclick="redirectNow()">Retry</button>
+        `;
+      }
+    }, 8000);
+  </script>
 </body>
 </html>
-
