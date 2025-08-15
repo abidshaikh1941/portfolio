@@ -3,7 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wrist Fellow</title>
+
+  <!-- Title -->
+  <title>Wrist Fellow – Premium Watches, Style & Accessories</title>
+
+  <!-- Meta Description -->
+  <meta name="description" content="Wrist Fellow offers premium wristwatches, stylish accessories, and timeless designs. Explore our collection and stay connected with us online.">
+
+  <!-- Meta Keywords -->
+  <meta name="keywords" content="wrist fellow, watches, premium watches, luxury watches, accessories, fashion, style, wrist accessories">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://wristfellow.com/">
+
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="Wrist Fellow – Premium Watches & Accessories">
+  <meta property="og:description" content="Discover premium wristwatches and stylish accessories with Wrist Fellow.">
+  <meta property="og:image" content="https://wristfellow.com/azam_logo_2.png">
+  <meta property="og:url" content="https://wristfellow.com/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wrist Fellow – Premium Watches & Accessories">
+  <meta name="twitter:description" content="Discover premium wristwatches and stylish accessories with Wrist Fellow.">
+  <meta name="twitter:image" content="https://wristfellow.com/azam_logo_2.png">
+
   <style>
     * {
       margin: 0;
@@ -20,41 +45,32 @@
       align-items: center;
       justify-content: center;
       gap: 20px;
+      text-align: center;
     }
-
-    /* Logo */
     .logo {
       width: 90px;
       height: 90px;
     }
-
-    /* Title */
-    .title {
-      font-size: 1.6rem;
+    h1.title {
+      font-size: 1.8rem;
       font-weight: bold;
       letter-spacing: 1px;
     }
-
-    /* Contact section */
     .contact {
       display: flex;
       flex-direction: column;
       gap: 14px;
       font-size: 1rem;
     }
-
     .contact-item {
       display: flex;
       align-items: center;
       gap: 10px;
     }
-
     .icon {
       width: 20px;
       height: 20px;
     }
-
-    /* Loading spinner */
     .loading {
       margin-top: 30px;
       display: flex;
@@ -64,7 +80,6 @@
       font-size: 0.9rem;
       color: #ccc;
     }
-
     .spinner {
       border: 3px solid rgba(255, 255, 255, 0.2);
       border-top: 3px solid #fff;
@@ -73,13 +88,10 @@
       height: 22px;
       animation: spin 0.8s linear infinite;
     }
-
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-
-    /* Retry button */
     .retry-btn {
       margin-top: 10px;
       padding: 6px 12px;
@@ -97,23 +109,24 @@
 </head>
 <body>
   <!-- Logo -->
-  <img src="azam_logo_2.png" alt="Wrist Fellow Logo" class="logo" />
+  <img src="azam_logo_2.png" alt="Wrist Fellow brand logo" class="logo" loading="lazy" />
 
   <!-- Title -->
-  <div class="title">WRIST FELLOW</div>
+  <h1 class="title">Wrist Fellow</h1>
+  <p>Your destination for premium wristwatches and stylish accessories.</p>
 
   <!-- Contact Info -->
   <div class="contact">
     <div class="contact-item">
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/internet.png" class="icon" alt="Website">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/internet.png" class="icon" alt="Website Icon">
       <span>WRISTFELLOW.COM</span>
     </div>
     <div class="contact-item">
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" class="icon" alt="Instagram">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" class="icon" alt="Instagram Icon">
       <span>@WRISTFELLOW1</span>
     </div>
     <div class="contact-item">
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" class="icon" alt="WhatsApp">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" class="icon" alt="WhatsApp Icon">
       <span>9574647871</span>
     </div>
   </div>
@@ -132,10 +145,8 @@
       window.location.href = "https://wristfellow1.cartpe.in/";
     }
 
-    // Redirect after 1 second
     setTimeout(redirectNow, 500);
 
-    // If still not redirected after 8 seconds, show retry option
     setTimeout(function() {
       if (!redirected) {
         document.querySelector(".loading").innerHTML = `
